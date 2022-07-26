@@ -1,2 +1,3 @@
 # Workday-Schedual
-This is a calendar that can be used for shedualing
+This is a hourly sheet that can be used for shedualing tasks.
+
