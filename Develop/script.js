@@ -2,18 +2,40 @@ var today = moment().format(yyyy-MM-dd);
 $("#currentDay").html(today);
 
 //tracking time
+ var timeBox = parseInt($(this).attr("id").split("hour")[1]);
+ var currentTime = moment().hour();
 
-function time(){
-    var currentTime = moment().hour();
+ function time(){
+   
 
-    $(".time-block").each(functiuon (){
+    $(".time-block").each(functiuon (),{
+       
 
-        if (time-block <= currentTime) {
+        if (_timebox < currentTime) {
             $(this).use(past);
-        } else if (time-block <= currentTime){
+        } else if (timeBox < currentTime){
             $(this).use(present);
-        }else {$(this).use(future);
-        }
+        }else if(timeBox <= currentTime){
+            $(this).use(future);
+        };
 
-    })
+        else if (timeBox <= currentTime) {
+            $(this).use(present);
+        } else if (timeBox  <= currentTime){
+            $(this).use(future);
+        }else if (timeBox <= currentTime);{
+            $(this).use(past);
+        };
+        else if (timeBox  <= currentTime) {
+            $(this).use(future);
+        } else if (timeBox  <= currentTime){
+            $(this).use(past);
+        }else (timeBox  <= currentTime);{
+            $(this).use(present);
+        }
+    });
 }
+
+$("#hours").val(localStorage.getItem)("time-box");
+
+timeTracker();
