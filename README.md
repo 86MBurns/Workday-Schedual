@@ -12,4 +12,4 @@ then i should be able to save
 This websit is where someone can co to plan out there workday in order to maintain the best schedual possible for the user.
 
 # Website 
-https://github.com/FrankFrackle/Workday-Schedual
+https://github.com/FrankFrackle/Workday-Schedual.git
