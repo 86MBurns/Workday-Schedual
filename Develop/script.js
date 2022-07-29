@@ -1,5 +1,5 @@
-var today = moment().format(YYYY-MM-DD);
-$("#currentDay").html(today);
+var today = moment().format(yyyy-MM-dd);
+$("#currentDay").html(todayDate);
 
 
 
@@ -36,4 +36,16 @@ $("#hours").val(localStorage.getItem)("time-box");
 
 currentMoment();
 // save button
+let savebtn = $('.saveButton');
+savebtn.getElemtentByID("savebtn").addEventListener("click");
 
+function saveButtonClickHandler(event) {
+    
+    event.preventDefault();
+    
+    calEntryEventTime = $(this).attr('id').split('-')[1];
+    
+    calEntryEventTxt = $(this).siblings('textarea[name^="timeblock"]').val().trim();
+    
+    storeEvents();
+};
