@@ -1,6 +1,15 @@
 var today = moment().format(yyyy-MM-dd);
 $("#currentDay").html(todayDate);
  
+
+
+  $(document).ready(function () {
+    $(".saveBtn").on("click", function () {
+      var text = $(this).siblings(".todos").val();
+      var time = $(this).parent().attr("id");
+  
+      localStorage.setItem(time, text);
+    
 function currentMoment() {
     var timeCurrent = moment().hour();
 
@@ -27,16 +36,7 @@ function currentMoment() {
         $(this).addClass("future");
       }
     });
-  }
-
-  $(document).ready(function () {
-    $(".saveBtn").on("click", function () {
-      var text = $(this).siblings(".todos").val();
-      var time = $(this).parent().attr("id");
-  
-      localStorage.setItem(time, text);
-    
-
+  }});
     $("#9am .todos").val(localStorage.getItem("9am"));
     $("#10am .todos").val(localStorage.getItem("10am"));
     $("#11am .todos").val(localStorage.getItem("11am"));
@@ -48,5 +48,5 @@ function currentMoment() {
     $("#5pm .todos").val(localStorage.getItem("5pm"));
     
 currentMoment();
-});
+
 });
